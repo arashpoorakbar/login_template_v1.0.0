@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Verify your email</title>
+</head>
+<body>
+    <div class = "container">
+        <% if(locals.err){ 
+            if(locals.err=="ALREADY_SENT"){text="EMail is sent. Check your spam folder!"};
+            if(locals.err=="NOT_REGISTERED"){text="This email is not registered"};
+            
+            %>
+        <div class = "containerrow">
+            <div class="rowelement, errortext">
+            <%= text %>
+        </div></div>
+        <% } %>
+        <form action="/users/verification" method="post">
+        <div class="containerrow" style="margin-top:10px">
+                
+            <div class="rowelement">
+                <fieldset class="fieldsetform">
+                    <legend class="legendobject">Email</legend>
+                    <input type="email" class="legendinput" id="email-to-verify" placeholder="Your Email!" name ="emailToVerify" required>
+                </fieldset>
+                    
+                
+            </div>
+            
+        </div>
+        <div class="containerrow">
+            <div class="rowelement">
+                <input type="submit" value="send verification email">
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px inset rgb(117, 118, 126);
+    align-self: center;
+    max-width: 500px;
+    min-width: 350px;
+    position: aboslute;
+    height: 320px;
+    top:10%;
+    bottom: 10%;
+    right: 25%;
+    left:25%;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+.container:hover {
+    box-shadow: 10px 10px 8px #755ad8;
+    
+}
+
+.containerrow{
+    display: flex;
+    border: 1px  rgb(23, 144, 57);
+    padding: 10px;
+    margin: 5px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row; 
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.rowelement{
+    display: flex;
+    border: 2px yellow;
+    margin: 1px;
+    padding: 1px;
+    align-items: center;
+    box-shadow: none;
+}
+
+
+.inputfield:focus{
+    background-color: rgb(188, 171, 171);
+}
+
+.errortext{
+padding: 5px;
+color: red;
+}
+
+
+.fieldsetform{
+    padding: 0;
+    margin: 0;
+    width: 50px;
+}
+
+.legendobject{
+    display: hide;
+    margin: -1;
+    
+}:focus{
+     border-color: red;
+}
+
+
+.legendinput{
+    border: none;
+    margin-top: -20px;
+    padding:0;
+    
+}:focus{
+    outline: none;
+}
+
+.submitButton{
+    background-color: rgb(67, 216, 40);
+    width:70px;
+    border: none;
+    height: 30px;
+}
+.submitButton:hover{
+    border: solid rgb(27, 96, 15);
+}

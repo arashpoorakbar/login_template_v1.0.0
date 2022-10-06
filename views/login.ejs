@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class = "container">
+        <% if(locals.err){ 
+            if(locals.err=="USER_NOT_FOUND"){text="This user is not registered"};
+            if(locals.err=="USER_NOT_ACTIVATED"){text="User's email is not verified, try verifying your email!"};
+            if(locals.err=="PASSWORD_INCORRECT"){text="Incorrect credentials"};
+            if(locals.err=="ALREADY_ACTIVATED"){text="Email activated. Log in!"};
+            if(locals.err=="SUCCESSFUL_REGISTER"){text="Successfully registered. Try signing in!"};
+            %>
+        <div class = "containerrow">
+            <div class="rowelement, errortext">
+            <%= text %>
+        </div></div>
+        <% } %>
+        <form method="post" action="./users/login">
+            <div class="containerrow" style="margin-top:10px">
+                
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject">Username</legend>
+                        <input type="text" class="legendinput" id="usernamefield" value="" name ="username" required>
+                    </fieldset>
+                    
+                </div>
+
+            </div>
+            <div class="containerrow">
+                
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject">Password</legend>
+                        <input type="password" class="legendinput" id="password" value="" name ="password" required>
+                    </fieldset>
+                
+                </div>
+            </div>
+            <div class="containerrow">
+                <div class="rowelement">
+                    <input type="submit" value="Login" class="submitButton">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
+
+
+

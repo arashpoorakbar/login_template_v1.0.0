@@ -1,0 +1,238 @@
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+
+body{
+    overflow: auto;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: aliceblueß;
+    padding: 0px;
+
+}
+.main-container {
+    
+    overflow: auto;
+    position: absolute;
+    top:9%;
+    left: 10%;
+    right: 10%;
+    
+    padding:10px;
+    box-shadow: 2px 10px 5px rgb(169, 225, 239);
+    border: 1px solid rgb(141, 134, 134);
+    height:40%;
+
+}
+
+.main-container:hover{
+    box-shadow: 2px 10px 5px rgb(152, 23, 101);
+    border: 1px solid rgb(141, 134, 134);
+}
+
+.table{
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 1px;
+}
+
+.table-column{
+    width: 10%;
+    border: blue solid;
+    
+}
+
+.table-cell{
+    width:100%;
+    word-wrap: break-word;         
+    overflow-wrap: break-word;
+    text-align: center;
+    font-size: small;
+}
+
+
+.navbar{
+    font-family: 'Courier New', Courier, monospace;
+    width:97%;
+    box-shadow: 2px 10px 5px rgb(169, 225, 239);
+    border: 1px solid rgb(141, 134, 134);
+    position: absolute;
+    top: 0%;
+    height: 6%;
+    
+    
+    /*justify-content:center;*/
+    
+}
+.logout{
+    position: absolute;
+    right: 1%;
+    top: 1px;
+}
+
+
+.info-table{
+    position: absolute;
+    width:8%;
+    top:10%;
+    bottom:2%;
+    border:black solid;
+    overflow: auto;
+    text-align: center;
+}
+.review-table{
+    position:absolute;
+    top: 60%;
+    
+    left:10%;
+    right:30%;
+    box-shadow: 2px 10px 5px rgb(169, 225, 239);
+    border: 1px solid rgb(141, 134, 134);
+    height: 20%;
+    
+}
+
+.control-container{
+    position: absolute;
+    top:60%;    
+    right:10%;
+    left:70%;
+    height: 20%;
+
+    border:black solid 1px;
+    
+    overflow: auto;
+}
+
+#to-delete{
+position: absolute;
+left:2%;
+overflow: auto;
+bottom: 0%;
+right:2%;
+top:2%;
+
+
+}
+#id-to-delete{
+    position: aboslute;
+    bottom: 2%;
+    width: 70%;
+}
+
+.delete-buttons{
+    position: absolute;
+    left:2%;
+    right:0%;
+    top:25%;
+    
+
+}
+
+.add-button-container{
+    position:absolute;
+    left: 2%;
+    top:2%;
+    width:30%;
+    height:10%;
+}
+
+#otp-input{
+    background-color: rgb(201, 80, 80);
+    color: aliceblue;
+    position: absolute;
+    right:30%;
+    left: 30%;
+    border: black solid;
+    text-align: center;
+}
+
+#otp-input > :first-child{
+    width:80%;
+    background-color: rgb(165, 149, 218);
+}
+
+#otp-input > :first-child::placeholder{
+    color:red
+}
+
+.delete-container{
+    position: absolute;
+    
+    
+    position: absolute;
+    
+    overflow: auto;
+    height:80%;
+    right:2%;
+    left:60%;
+    top:2%;
+
+    border:black solid;
+}
+
+.changingData{
+    position: absolute;
+    top:2%;
+    width: 53%;
+    height: 80%;
+    border:black solid;
+    overflow: auto;
+    text-overflow:inherit;
+}
+
+.reload-button{
+    position: absolute;
+    right:2%;
+    top:2%;
+    height: 10%;
+    
+}
+.box-to-submit{
+    position: absolute;
+    bottom: 5%;
+    right:2%;
+    left:2%;
+    height:30%; 
+    text-overflow: ellipsis;
+}
+
+.otp-input-to-submit{
+    height:100%;
+    width:70%;
+    
+    
+}
+
+.otp-input-to-submit:placeholder-shown{
+    
+    font-size:1%;
+    white-space: nowrap ;
+    overflow:initial;
+    text-overflow:ellipsis ;
+}
+
+.messagelastcontainer {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  
+  .messagelast {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  

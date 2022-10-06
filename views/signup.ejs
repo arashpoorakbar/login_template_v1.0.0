@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    
+    <div class="container">
+        <% if(locals.err){ 
+            if(locals.err=="USERNAME_TAKEN"){text="This username is already taken!"};
+            if(locals.err=="EMAIL_ALREADY_REGISTERED"){text="This email is already registered!"};
+            if(locals.err=="INTERNAL_ERROR"){text="Sorry! Something went worng! Try again!"};
+            %>
+        <div class = "containerrow">
+            <div class="rowelement, errortext">
+            <%= text %>
+        </div></div>
+        <% } %>
+        <form action="/users/register" method="post" class="form-group">
+            <div class="containerrow">
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject"><span style="color:red">*</span>Name</legend>
+                        <input type="text" class="legendinput" id="nameInput" value="" name ="name" required>
+                    </fieldset>
+                </div>
+                <div class="rowelement">    
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject">LastName</legend>
+                        <input type="text" class="legendinput" id="lastnameInput" value="" name ="lastname">
+                    </fieldset>
+                </div>
+            </div>
+            <div class="containerrow">
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject"><span style="color:red">*</span>Username</legend>
+                        <input type="text" class="legendinput" id="usernameInput" value="" name ="username" required>
+                    </fieldset>
+                </div>
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject"><span style="color:red">*</span>Password</legend>
+                        <input type="password" class="legendinput" id="passwordInput" value="" name ="password" required>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="containerrow">
+                <div class="rowelement">
+                    <fieldset class="fieldsetform">
+                        <legend class="legendobject"><span style="color:red">*</span>Email</legend>
+                        <input type="email" class="legendinput" id="emaildInput" value="" name ="email" required>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="containerrow">
+                <div class="rowelement">
+                    <input type="submit" class="submitButton" id="registerSubmit" value="Register">
+                </div>
+            </div>
+        </form>
+        
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
